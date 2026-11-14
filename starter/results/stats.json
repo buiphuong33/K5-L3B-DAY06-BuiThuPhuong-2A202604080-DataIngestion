@@ -1,0 +1,41 @@
+{
+  "model": "sentence-transformers/all-MiniLM-L6-v2",
+  "dimensions": 384,
+  "device": "cpu",
+  "cost_usd": 0,
+  "config": {
+    "A": {
+      "size": 500,
+      "overlap": 50
+    },
+    "B": {
+      "max_size": 900
+    }
+  },
+  "rows_before": {
+    "A": 557,
+    "B": 367
+  },
+  "A": {
+    "chunks": 557,
+    "total_chars": 259783,
+    "min_len": 55,
+    "mean_len": 466,
+    "max_len": 500,
+    "embed_seconds": 14.92,
+    "upsert_seconds": 0.46
+  },
+  "B": {
+    "chunks": 367,
+    "total_chars": 235566,
+    "min_len": 85,
+    "mean_len": 642,
+    "max_len": 900,
+    "embed_seconds": 14.92,
+    "upsert_seconds": 0.28
+  },
+  "rows_after": {
+    "A": 557,
+    "B": 367
+  }
+}

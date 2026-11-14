@@ -1,4 +1,4 @@
 strategy,chunking,chunk_size,overlap,metadata,filter,vectorizer,hypothesis,dev_hit1,dev_hit3,test_hit1,test_hit3,notes
-A,,,,,,,,,,,,
-B,,,,,,,,,,,,
-C,,,,,,,,,,,,
+A,fixed-size per page (character windows),500,50,document_id; source; page; chapter,none,sentence-transformers/all-MiniLM-L6-v2 (384d; local CPU; cosine; pgvector 0.8.7 exact search),Baseline: cắt cố định có thể tách evidence qua ranh giới chunk,6/15,9/15,3/5,3/5,557 chunks; mean 466 chars; embed 14.92 s; upsert 0.46 s; cost 0; coherence 0.9/2; grounding test 1.8/2; run 2026-11-14 11:14
+B,paragraph-aware per page (PyMuPDF text blocks; oversize split by sentence),max 900,0,document_id; source; page; chapter,none,sentence-transformers/all-MiniLM-L6-v2 (384d; local CPU; cosine; pgvector 0.8.7 exact search),Chunk theo đoạn giữ trọn câu/ý nên tăng Evidence Hit@3 và coherence so với A,8/15,12/15,3/5,4/5,367 chunks; mean 642 chars; embed 14.92 s; upsert 0.28 s; cost 0; coherence 1.7/2; grounding test 1.8/2; run 2026-11-14 11:14
+C,same chunks and vectors as B,max 900,0,document_id; source; page; chapter,chapter = value given in question context (only q04; q07; q12; q18),sentence-transformers/all-MiniLM-L6-v2 (384d; local CPU; cosine; pgvector 0.8.7 exact search),Lọc theo chapter loại chunk khác chương ở câu có ngữ cảnh chương; chỉ khác B ở bước lọc,8/15,12/15,3/5,4/5,reuses B rows (367); no extra embedding; filter-scope compliance dev 3/3 (B 0/3) test 1/1; Hit không đổi so với B; run 2026-11-14 11:14

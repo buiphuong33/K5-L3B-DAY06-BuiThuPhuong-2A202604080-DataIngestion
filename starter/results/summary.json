@@ -1,0 +1,44 @@
+{
+  "A/dev": {
+    "n": 15,
+    "hit1": 6,
+    "hit3": 9,
+    "hit1_n_over_N": "6/15",
+    "hit3_n_over_N": "9/15"
+  },
+  "A/test": {
+    "n": 5,
+    "hit1": 3,
+    "hit3": 3,
+    "hit1_n_over_N": "3/5",
+    "hit3_n_over_N": "3/5"
+  },
+  "B/dev": {
+    "n": 15,
+    "hit1": 8,
+    "hit3": 12,
+    "hit1_n_over_N": "8/15",
+    "hit3_n_over_N": "12/15"
+  },
+  "B/test": {
+    "n": 5,
+    "hit1": 3,
+    "hit3": 4,
+    "hit1_n_over_N": "3/5",
+    "hit3_n_over_N": "4/5"
+  },
+  "C/dev": {
+    "n": 15,
+    "hit1": 8,
+    "hit3": 12,
+    "hit1_n_over_N": "8/15",
+    "hit3_n_over_N": "12/15"
+  },
+  "C/test": {
+    "n": 5,
+    "hit1": 3,
+    "hit3": 4,
+    "hit1_n_over_N": "3/5",
+    "hit3_n_over_N": "4/5"
+  }
+}
